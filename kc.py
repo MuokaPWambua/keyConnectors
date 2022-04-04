@@ -31,12 +31,12 @@ average_connections = total_connections/ len(users)
 
 print(f'average connections: {average_connections}')
 
-# sort user with most friends to least friends
+# sort user with most friends to least friends; get most connected users
 
 num_friends_by_id = [(user['id'], number_of_friends(user)) for user in users]
 
-sorted_user_by_friend = sorted(num_friends_by_id, key=lambda(user_id,num_friends):num_friends, reverse=True)
+sorted_user_by_friend = sorted(num_friends_by_id, key=lambda(user_id, num_friends): num_friends, reverse=True)
 
-print(f'sorted friends by most to least: {sorted_user_by_friend}')
+print(f'most connected users to least: {sorted_user_by_friend}')
 
 
